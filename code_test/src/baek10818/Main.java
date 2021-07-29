@@ -24,7 +24,5 @@ public class Main {
 		 	Arrays.sort(arr);
 		 	System.out.print(arr[0] + " " + arr[N-1]);
 		 	
-		 	
-		 	
 	 }
 }
