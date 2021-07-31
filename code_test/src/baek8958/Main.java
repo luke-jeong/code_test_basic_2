@@ -1,7 +1,6 @@
 package baek8958;
 
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 
@@ -9,23 +8,33 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		String answer = sc.next();		
-		        
-		for(int i = 0; i<arr.length; i++) {
-			arr[i] = sc.nextDouble();
+		String arr[] = new String[sc.nextInt()];
+		
+		for(int i = 0; i< arr.length; i++){
+			arr[i] = sc.next();
 		}
+		
 		sc.close();
 		
-		double sum = 0;
-		Arrays.sort(arr);
-		
-		for(int i = 0; i<arr.length; i++) {
+		for(int i = 0; i< arr.length; i++) {
 			
-				sum += ((arr[i] / arr[arr.length-1])*100);
-		}		
+			int count = 0;
+			int sum = 0;
 			
-			System.out.println(sum/arr.length);
+			for(int j = 0; j < arr[i].length(); j++) {
+				if(arr[i].charAt(j)=='O') {
+					count++;
+				}
+				else {
+					count = 0;
+				}
+				sum +=count;
+			}
+			System.out.println(sum);
 		}
+	}
+		        
+		
 }
 
 
